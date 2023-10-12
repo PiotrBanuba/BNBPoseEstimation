@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-6"
+let bnbPackageVersion: Version = "1.8.0-7"
 
 let package = Package(
     name: "BNBPoseEstimation",
@@ -12,10 +12,10 @@ let package = Package(
         .library(
             name: "BNBPoseEstimation",
             targets: [
-                "BNBPoseEstimation",
-                "BNBSdkCore",
-                "BNBEffectPlayer",
-                "BNBScripting"
+                "BNBPoseEstimationBNBPoseEstimationTarget",
+                "BNBPoseEstimationBNBSdkCoreTarget",
+                "BNBPoseEstimationBNBEffectPlayerTarget",
+                "BNBPoseEstimationBNBScriptingTarget"
             ]
         ),
     ],
@@ -40,7 +40,7 @@ let package = Package(
             checksum: "84074a90ecee7cd0888bcbf3eb793a8b3b2271113b9f0b08066550106c383f10"
         ),
         .target(
-            name: "BNBSdkCore",
+            name: "BNBPoseEstimationBNBSdkCoreTarget",
             dependencies: [
                 .product(
                     name: "BNBSdkCore",
@@ -49,7 +49,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBEffectPlayer",
+            name: "BNBPoseEstimationBNBEffectPlayerTarget",
             dependencies: [
                 .product(
                     name: "BNBEffectPlayer",
@@ -58,7 +58,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBScripting",
+            name: "BNBPoseEstimationBNBScriptingTarget",
             dependencies: [
                 .product(
                     name: "BNBScripting",
