@@ -13,9 +13,9 @@ let package = Package(
             name: "BNBPoseEstimation",
             targets: [
                 "BNBPoseEstimation",
-                "BNBPoseEstimationBNBSdkCoreTarget",
-                "BNBPoseEstimationBNBEffectPlayerTarget",
-                "BNBPoseEstimationBNBScriptingTarget"
+                "BNBPoseEstimationBNBSdkCore",
+                "BNBPoseEstimationBNBEffectPlayer",
+                "BNBPoseEstimationBNBScripting"
             ]
         ),
     ],
@@ -40,7 +40,7 @@ let package = Package(
             checksum: "84074a90ecee7cd0888bcbf3eb793a8b3b2271113b9f0b08066550106c383f10"
         ),
         .target(
-            name: "BNBPoseEstimationBNBSdkCoreTarget",
+            name: "BNBPoseEstimationBNBSdkCore",
             dependencies: [
                 .product(
                     name: "BNBSdkCore",
@@ -49,7 +49,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBPoseEstimationBNBEffectPlayerTarget",
+            name: "BNBPoseEstimationBNBEffectPlayer",
             dependencies: [
                 .product(
                     name: "BNBEffectPlayer",
@@ -58,7 +58,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBPoseEstimationBNBScriptingTarget",
+            name: "BNBPoseEstimationBNBScripting",
             dependencies: [
                 .product(
                     name: "BNBScripting",
