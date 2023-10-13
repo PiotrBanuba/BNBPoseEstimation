@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-13"
+let bnbPackageVersion: Version = "1.8.0-14"
 
 let package = Package(
     name: "BNBPoseEstimation",
@@ -13,9 +13,9 @@ let package = Package(
             name: "BNBPoseEstimation",
             targets: [
                 "BNBPoseEstimation_Target",
-                "BNBPoseEstimation_BNBPoseEstimation_Target",
-                "BNBPoseEstimation_BNBPoseEstimation_Target",
-                "BNBPoseEstimation_BNBPoseEstimation_Target"
+                "BNBPoseEstimation_BNBSdkCore_Target",
+                "BNBPoseEstimation_BNBEffectPlayer_Target",
+                "BNBPoseEstimation_BNBScripting_Target"
             ]
         ),
     ],
