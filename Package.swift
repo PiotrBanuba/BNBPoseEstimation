@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-11"
+let bnbPackageVersion: Version = "1.8.0-13"
 
 let package = Package(
     name: "BNBPoseEstimation",
@@ -12,10 +12,10 @@ let package = Package(
         .library(
             name: "BNBPoseEstimation",
             targets: [
-                "BNBPoseEstimation",
-                "BNBSdkCore",
-                "BNBEffectPlayer",
-                "BNBScripting"
+                "BNBPoseEstimation_Target",
+                "BNBPoseEstimation_BNBPoseEstimation_Target",
+                "BNBPoseEstimation_BNBPoseEstimation_Target",
+                "BNBPoseEstimation_BNBPoseEstimation_Target"
             ]
         ),
     ],
@@ -35,9 +35,36 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "BNBPoseEstimation",
+            name: "BNBPoseEstimation_Target",
             url: "https://d2cm7wtcqqw29.cloudfront.net/1.8.0-58-g46079e7d74/BNBPoseEstimation.zip",
             checksum: "84074a90ecee7cd0888bcbf3eb793a8b3b2271113b9f0b08066550106c383f10"
+        ),
+        .target(
+            name: "BNBPoseEstimation_BNBSdkCore_Target",
+            dependencies: [
+                .product(
+                    name: "BNBSdkCore",
+                    package: "BNBSdkCore"
+                ),
+            ]
+        ),
+        .target(
+            name: "BNBPoseEstimation_BNBEffectPlayer_Target",
+            dependencies: [
+                .product(
+                    name: "BNBEffectPlayer",
+                    package: "BNBEffectPlayer"
+                ),
+            ]
+        ),
+        .target(
+            name: "BNBPoseEstimation_BNBScripting_Target",
+            dependencies: [
+                .product(
+                    name: "BNBScripting",
+                    package: "BNBScripting"
+                ),
+            ]
         ),
     ]
 )
